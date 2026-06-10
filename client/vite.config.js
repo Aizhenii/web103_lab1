@@ -7,8 +7,11 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      '/gifts': {
-        target: 'http://localhost:3001'
+      '/api': {
+        target: 'http://localhost:3000'
+      },
+      '/restaurant': {
+        target: 'http://localhost:3000'
       }
     }
   }
