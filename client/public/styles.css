@@ -1,0 +1,206 @@
+:root {
+  --pico-font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  --brand: #0f766e;
+  --brand-dark: #134e4a;
+  --surface: #f8faf9;
+  --ink-soft: #55615f;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, rgba(15, 118, 110, 0.08), rgba(248, 250, 249, 0) 360px),
+    var(--surface);
+}
+
+body > header {
+  border-bottom: 1px solid rgba(17, 24, 39, 0.08);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.9rem;
+}
+
+.header-left {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.header-left img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.header-left h1 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 750;
+}
+
+.header-right {
+  margin: 0;
+}
+
+.page-intro {
+  max-width: 760px;
+  padding-block: 3.25rem 2rem;
+}
+
+.page-intro h2,
+.detail-summary h2,
+.not-found h2 {
+  margin-bottom: 0.75rem;
+  color: var(--brand-dark);
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.05;
+}
+
+.page-intro p {
+  color: var(--ink-soft);
+}
+
+.eyebrow {
+  margin-bottom: 0.5rem;
+  color: var(--brand);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.1rem;
+  padding-bottom: 3rem;
+}
+
+.restaurant-card {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+.restaurant-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.restaurant-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1rem;
+}
+
+.restaurant-card h3 {
+  margin: 0;
+  color: #10201e;
+  font-size: 1.18rem;
+}
+
+.restaurant-card p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.restaurant-meta {
+  font-weight: 700;
+}
+
+.restaurant-card a[role="button"] {
+  margin-top: auto;
+}
+
+.detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+  gap: 2rem;
+  align-items: start;
+  padding-block: 3rem;
+}
+
+.detail-image {
+  width: 100%;
+  min-height: 420px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 20px 48px rgba(15, 23, 42, 0.12);
+}
+
+.detail-summary {
+  margin: 0;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.field-list {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 1rem;
+  padding-block: 0.75rem;
+  border-top: 1px solid rgba(17, 24, 39, 0.08);
+}
+
+.field-row dt {
+  color: #182c29;
+  font-weight: 800;
+}
+
+.field-row dd {
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+  color: var(--ink-soft);
+}
+
+.not-found {
+  max-width: 720px;
+  padding-block: 4rem;
+}
+
+@media (max-width: 760px) {
+  .header-container {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .detail-layout {
+    grid-template-columns: 1fr;
+    padding-block: 1.5rem;
+  }
+
+  .detail-image {
+    min-height: 280px;
+  }
+
+  .field-row {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+}
