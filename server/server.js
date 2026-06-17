@@ -1,4 +1,5 @@
 import express from 'express'
+import './dotenv.js'
 import restaurantRouter from './routes/restaurants.js'
 const app = express()
 
