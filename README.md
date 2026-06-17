@@ -31,6 +31,11 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
+<img width="865" height="541" alt="image" src="https://github.com/user-attachments/assets/bbd3ce01-d4c6-475e-bd2a-2376ebc4fd60" />
+<img width="865" height="338" alt="image" src="https://github.com/user-attachments/assets/6f552e14-9ddc-4af1-ba21-cda79d19b689" />
+
+
+
 https://imgur.com/a/2YXtT2m
 
 <!-- Replace this with whatever GIF tool you used! -->
